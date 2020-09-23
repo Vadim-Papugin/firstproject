@@ -173,7 +173,7 @@
   Записать ответы в объект movies в формате:
    movies:{
     'logan': '8.1'
-}*/
+}
 const numberOfFilms = +promt('Сколько фильмов вы уже посмотрели?', '');
 const personalMovieDB ={};
 personalMovieDB = {
@@ -182,10 +182,30 @@ personalMovieDB = {
     actors: {},
     genres: [],
     privat: false
-};
-const a = 'Один из последних просмотренных фильмов?';
+};*/
+/*const a = 'Один из последних просмотренных фильмов?';
 const b = 'На сколько оцените его?';
 movies: {
     a;
     b;
-}
+}*/
+
+const numberOfFilmus = +prompt('Сколько фильмов вы уже посмотрели?');
+
+const personalMovieDBe = {
+
+    count:numberOfFilmus,
+    movies:{},
+    actors:{},
+    genres:[],
+    privat:false
+};
+
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
+
+personalMovieDBe.movies[a] = b;
+personalMovieDBe.movies[c] = d;
+console.log(personalMovieDBe);
