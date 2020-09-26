@@ -189,7 +189,7 @@ movies: {
     a;
     b;
 }*/
-
+'use strict';
 const numberOfFilmus = +prompt('Сколько фильмов вы уже посмотрели?');
 
 const personalMovieDBe = {
