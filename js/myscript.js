@@ -209,3 +209,4 @@ const a = prompt('Один из последних просмотренных ф
 personalMovieDBe.movies[a] = b;
 personalMovieDBe.movies[c] = d;
 console.log(personalMovieDBe);
+
