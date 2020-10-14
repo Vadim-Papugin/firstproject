@@ -208,9 +208,7 @@ const a = prompt('Один из последних просмотренных ф
 
 personalMovieDBe.movies[a] = b;
 personalMovieDBe.movies[c] = d;
-<<<<<<< HEAD
-console.log(personalMovieDBe);*/
-=======
-console.log(personalMovieDBe);
 
->>>>>>> 3d9549462475086d455fdb778d71b30295944a65
+console.log(personalMovieDBe);
+console.log(personalMovieDBe);*/
+
