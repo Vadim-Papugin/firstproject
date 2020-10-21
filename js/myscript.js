@@ -183,12 +183,21 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-const a = prompt('Один из последних просмотренных фильмов?','');
-const b = prompt('На сколько оцените его?','');
-const c = prompt('Один из последних просмотренных фильмов?',''),
-      d = prompt('На сколько оцените его?','');
-      personalMovieDB.movies = {a,b,c,d};
-console.log(personalMovieDB.movies);
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?',''),
+          b = prompt('На сколько оцените его?',''); 
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+            personalMovieDB.movies[a]= b;
+            console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+
+          
+}
+ console.log(personalMovieDB);
 /*'use strict';
 const numberOfFilmus = +prompt('Сколько фильмов вы уже посмотрели?');
 
