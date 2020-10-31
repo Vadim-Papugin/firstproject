@@ -31,14 +31,20 @@
 
 // const ansver = prompt('Вам есть 18','');
 // console.log(answer);
-// console.log(typeof(ansver));
+// console.log(typeof(ansver));typeof - это команда с помощью которой 
+//можно узанть какой тип данных в переменной.
+//Но любые данные от пользователя приходят в виде строки!
 // alert('Hello');
 //если мы хотим узнать ответ пользователя да или нет.
 // то нам нужна команда сонфирм
 // const result = confirm('Are you here');
 // console.log(result);
 // const answer = prompt('Вам есть 18 лет?', '');
-
+//const answers = [];
+//answers[0] = prompt('Как ваше имя?','');
+//answers[1] = prompt('Как ваша фамилия?','');
+//answers[2] = prompt('Сколько вам лет?','');
+  
 //const category = 'toys';
 //console.log('https://someurl.com/'+ category/+/+4');
 //console.log(`https://someurl.com/${category}/5`);
