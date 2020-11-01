@@ -66,17 +66,26 @@ let are = 51;
 console.log(`Мне ${are} год!`);
 const a = prompt('Ваше имя' , '');
 alert(a);
-//'use strict';
-//let nam = 'Вадим';
-//alert(`Привет, ${nam}!`);
+'use strict';
+let nam = 'Вадим';
+alert(`Привет, ${nam}!`);
 let a = prompt('Ваше имя', '');
 alert(a);
 console.log(a);
 let b = prompt('Задайте число, мы вернём его "квадрат"');
 let c = alert(b*b);
 console.log(c);*/
-let str = 'abcde';
-alert(str[0]);
-alert(str[2]);
-alert(str[4]);
-alert(str`[0],[2], [4]`);
+//let str = 'abcde';
+//alert(str[0]);
+//alert(str[2]);
+//alert(str[4]);
+
+//const num = '12345';
+//let a = console.log(num.length);
+//console.log(num[0]*num[1]*num[2]*num[3]*num[4]);
+//console.log(60*60*24*30);
+let a = 1,
+    b = a * 60,
+    c = b * 60;
+    console.log(a,b,c);
+
