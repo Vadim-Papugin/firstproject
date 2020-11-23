@@ -292,9 +292,86 @@ let a;
         str = str + 'x';
         document.write(str + '<br>');
     
-    }*/
+    }
     let str = '';
     for (let i = 1; i <= 9; i++) {
         str = str + i;
     }
     alert(str);
+    
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= 3; j++) {
+            document.write(i);
+        }
+        document.write('<br>');
+    }*//*
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(i);
+        }
+        document.write('<br>');
+    }*/
+    /*for (let i = 1; i <= 9; i++) {
+        let str = ''; //каждый раз зачищаем строку
+
+    for (let j = 1; j <= i; j++) {
+        str = str + i;
+    }
+    document.write(str + '<br>');
+    }
+    
+    for (let i = 1; i <= 9; i++) {
+        document.write(i);
+    }
+    let str = '';
+    for (let i = 9; i >= 1; i--) {
+        str = str + i;
+    }
+    document.write(str);
+
+    let str = '';
+    for (let i = -1; i >= -9; i--) {
+        str = str + i;
+    }
+    document.write(str);
+    let str = '';
+    for (let i = 1; i <= 20; i ++) {
+         str = str + 'x';
+         document.write(str + '<br>');
+    }
+    
+    for (let i = 1; i <= 9; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(i);
+        }
+    document.write('<br>');
+    }
+    let str = '';
+    for (let i = 1; i <= 5; i++ ) {
+        
+            str = str + 'xx';
+            document.write(str + '<br>');
+        }//выведутся строчки x :5строк , в столбец , прибавляя в каждой по хх;
+        
+                 // Массивы.
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push('x');
+    }
+    console.log(arr);
+    
+   let arr = [];
+    for (let i = 1; i <= 10; i++) {
+        arr.push(i);
+    }
+    console.log(arr);
+    let arr = [];
+    for (let i = 0; i< 10; i++) {
+        arr[i] = 'x';
+    }
+    console.log(arr);*/
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr = i+1;
+    }
+    console.log(arr);
