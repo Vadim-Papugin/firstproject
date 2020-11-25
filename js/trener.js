@@ -369,9 +369,159 @@ let a;
     for (let i = 0; i< 10; i++) {
         arr[i] = 'x';
     }
-    console.log(arr);*/
+    console.log(arr);
     let arr = [];
     for (let i = 0; i < 10; i++) {
-        arr = i+1;
+        arr[i] = i+ 1;
     }
     console.log(arr);
+    let arr = ['a','b','c','d','e'];
+    let result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    console.log(result);
+    //способ переборки объекта ключ - значение с помощью цикла for in//
+    for (let key in options) {
+        console.log(`Свойство ${key} имеет значение ${optionsx[key]}`);
+    }
+    // того, чтобы перебрать объект color , в нутри объекта ,надо дописать код.
+    for (let key in options) {
+        if (typeof(options[key]) === 'object') {
+            for (let i in options[key]) {
+                console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+            }
+        }else {
+            console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        }
+    }
+    //чтобы упростить перебор массива на предмет ключей и колличества ключей "key" , смотри код ниже
+    console.log(Object.keys('название объекта').length);//эта конструкция выведет число ключей,  пар значение ключ
+    console.log(Object.keys('название объекта'));//эта кончтрукцпия выведет массив с названиями ключей
+    let arr1 = [];
+    for (let i = 0; i <= 7; i++) {
+        arr1.push('x');
+    }
+    console.log(arr1);//выведет['x',7раз]
+    let arr2 = [];
+    for (let i = 1; i <= 12; i++) {
+        arr2.push(i);
+    }
+    console.log(arr2);
+    let arr3 = [];
+    for (let i = 0; i <= 8; i++) {
+        arr3[i] = 'x';
+    }
+    console.log(arr3);
+    let arr4 = [];
+    for (let i = 0; i < 10; i++) {
+        arr4[i] = i + 1 ;  
+    }
+    console.log(arr4);
+    let arr = ['a','b','c','d','e','f'];
+    let result = [];
+
+    for (let i = arr.length - 1 ; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    console.log(result);
+    let obj = {a:1,b:2,c:3,d:4,e:5};
+    let result = {};
+    for (let key in obj) {
+        result[obj[key]]= key;
+    }
+    console.log(result);
+    let arr = ['a','b','c','d','a','a','b'];
+    let count = {a : 0, b : 0, c: 0, d: 0};
+    for (let i = 0; i < arr.length; i++ ) {
+        count[arr[i]]++;
+    }
+    console.log(count);
+    let arr1 = ['a','b','c','a','b'];
+    let count1 = {};
+    for (let i = 0; i < arr1.length; i++) {
+        if (count1[arr1[i]] === undefined ) {
+            count1[arr1[i]] = 1;
+        }
+        else {
+            count1[arr1[i]]++;
+        }
+    }
+    console.log(count1);
+    let arr = [[1,2,3,4,5],[6,7,8],[9,10]];
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            console.log(arr[i][j]);
+        }
+    }
+    let arr = [];
+    let str = '';
+    for (let i = 0; i < 5; i++ ) {
+           str = str + 'x';
+           arr.push(str);
+    }
+    console.log(arr);
+    let arr = [];
+    let str = '';
+    for (let i = 1; i < 5; i++ ) {
+        for (let j = 1; j <= i; j++) {
+            str = i ;
+            arr.push(str);
+        }
+ 
+        }            
+    console.log(arr);
+    'use strict';
+    const num = 'ioioiuoiu';
+    if (num == 35) {
+        console.log('Верно');
+    } else if (num > 35) {
+        console.log('Не верно');
+    } else if (num < 35) {
+        console.log('Не верно');
+    } else  {
+        console.log('Похоже это не число, попробуйте ещё раз');
+    }*/
+//Тернарный оператор это ('условие'?'если верно ,то выполнить что то':'если не верно, то выполнить , что то другое')
+//Тернарный оператор один в JavaScript
+//(num === 55) ? console.log('Ok!') : console.log('Error!');
+//switch - это конструкция ,кот. заменяет if else, но только на строгое сравнение!
+const num = 3;
+
+switch (num) {
+    case 33:
+        console.log('Не верно');
+        break; 
+        case 37:
+            console.log('Мимо');
+            break;
+            case 'Юлия.':
+                console.log('Не то');
+                break;
+                case 'Нат.':
+                    console.log('То ,что надо!');
+                    break;
+                    default:
+                        console.log('Что-то не так)');
+                        break;
+
+}
+    //ЦИКЛЫ
+    
+    let nums = 20;
+    while (nums >= 15) {
+        console.log(nums);
+        nums--;
+    }
+
+    let nums = 20;
+    do {
+        console.log(nums);
+        nums++;
+    }
+    while (nums < 26);
+
+
+
+
