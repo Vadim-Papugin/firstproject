@@ -520,8 +520,41 @@ switch (num) {
         console.log(nums);
         nums++;
     }
-    while (nums < 26);*/
+    while (nums < 26);
 
 // немного исправил
+for (let i = 1; i < 8; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+- 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
+
+Проверить, чтобы все работало без ошибок в консоли */
+
+//'use strict';
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+let a = prompt('Один из последних просмотренных фильмов?',''),
+    b = prompt('На сколько оцените его?',''),
+    c = prompt('Один из последних просмотренных фильмов?',''),
+    d = prompt('На сколько оцените его?','');
+    personalMovieDB.movies[a] = b;
+    personalMovieDB.movies[c] = d;
+
+    console.log(personalMovieDB.movies);
 
 
