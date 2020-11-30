@@ -20,7 +20,6 @@
 //     age: 25,
 //     isMarried: false,
 // };
-
 // console.log(obj.name);
 // console.log(obj[name]);//это неверная запись
 // console.log(obj["name"]);//вот так - правильно
@@ -179,7 +178,7 @@
   Записать ответы в объект movies в формате:
    movies:{
     'logan': '8.1'
-}*/
+}
  'use strict';
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 const personalMovieDB = {
@@ -204,7 +203,7 @@ for (let i = 0; i < 2; i++) {
           
 }
  console.log(personalMovieDB);
-/*'use strict';
+'use strict';
 const numberOfFilmus = +prompt('Сколько фильмов вы уже посмотрели?');
 
 const personalMovieDBe = {
@@ -225,5 +224,83 @@ personalMovieDBe.movies[a] = b;
 personalMovieDBe.movies[c] = d;
 
 console.log(personalMovieDBe);
-console.log(personalMovieDBe);*/
+console.log(personalMovieDBe);
 
+function showFirstMessage() {
+    console.log("Hello World!");
+}
+showFirstMessage();
+
+console.log(Object.keys('название объекта').length);
+//конструкция в строчке 235 даёт возможность пересчитать ключи верхнево уровня объекта.
+
+const arr = [2, 3 ,6 ,7 ,9];
+//мы создали массив , далее пойдёт метод перебора массива.
+arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+});
+//Слудующий вариант перебора массива с помощью цикла for of, 
+//этот вариант интересен тем , что можно использовать операторы
+// break и continium, а это расширяет возможности . Метод forEach  это не даёт.
+
+const arr1 = [3, 1, 5, 7, 0];
+for (let value of arr1) {
+    console.log(value);
+}//value - это просто название переменной, оно может быть любым.
+
+//сортировка массива через указанный разделитель, например запятую. Разделитель любой ,какой укажу.
+const str = prompt("","");
+const products = str.split(", ");
+console.log(products);//далее необходимо запустить страничку в браузере, задать данные в модальном окне и в консоле 
+//посмотреть массив.(из строки мы сформировали массив)
+
+//метод join формирует из массива - строку , через указанный разделитель.
+//это метод, обратный split.
+const str = prompt("","");
+const products = str.split(", ");
+//console.log(products);
+console.log(products.join('; '));
+//далее метод sort, этот метод своеобразен, если взять 
+
+const str = prompt("","");
+const products = str.split(", ");
+products.sort();//слова этот метод сортирует по алфовиту и записывает массив в строку,
+//но с цифрами сложнее , в метод сорт необходимо добавить колбэк функцию:
+
+const arr = [2, 18, 33, 11, 9];
+arr.sort(compareNum);
+console.log(arr);
+function compareNum(a, b)  {
+    return a - b;
+}*/
+
+//для создания прототипа есть несколько команд.
+//1. устаревшая jonh._proto_= soldier; джон прототип или (копия) солдата.
+//2. Object.setPrototypeOf(jonh, soldier); чтобы вписать джона после его объявления, ниже по коду. 
+//3. const jonh = Object.create(soldier); при объявлении jonha, прописываем его , как прототип (полная копия) солдата.
+
+let str = "some";
+let strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj));
+
+console.dir([1,2,3]);//в браузере можно увидеть все свойства этого объекта
+"use strict";
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+        console.log("Hello");
+    }
+};
+//const jonh = Object.create(soldier);//это способ наследования при объявлении переменной jonh.
+const jonh = {
+    health: 100
+};
+//Object.setPrototypeOf(jonh, soldier);//это способ наследования после объявления переменной jonh.
+
+jonh.__proto__ = soldier;//устаревший способ наследования , после объявления переменной jonh.
+//console.log(jonh);
+jonh.sayHello();
+//console.log(jonh);
