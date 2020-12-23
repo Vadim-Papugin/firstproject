@@ -543,7 +543,7 @@ for (let i = 1; i < 8; i++) {
 let numberOfFilms;
 
 function start1 () {                                                            
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');                                                                        
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');                                                  
     while  (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
     }
@@ -572,7 +572,6 @@ function rememberMyFilms () {
     }
 }
 rememberMyFilms ();
-
 function detectpersonalMovieDB () {
     if (personalMovieDB.count < 10) {
         alert("Просмотрено довольно мало фильмов");
@@ -605,3 +604,399 @@ function writeYourGenres() {
 }
 
 writeYourGenres();
+
+function learnJS(lang, callback) {
+    console.log(`Я учу : ${lang}`);
+    callback();
+}
+
+function done() {
+    console.log('Я прошёл этот урок!');
+}
+learnJS('JS', done);// Или вариант ниже , тот же функционал.
+learnJS('JS', function() {
+    console.log('Я урок этот прошёл!');
+
+});
+
+//const obj = new Object();//устаревший вариант.
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+
+    }
+};
+
+//console.log(options.name);
+
+//delete options.name;//это для удаления свойства name из объекта options.
+//console.log(options);
+
+for (let key in options) {
+    if (typeof(options[key])==='object') {
+        for (let i in options[key]) {
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+        }
+         
+        } else {
+            console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        
+    }
+    console.log(`Свойство ${key} имеет значение ${options[key]}`);
+}
+    
+
+const newObject = {
+    cth: 123,
+    sll: 654,
+    oook: 999,
+    vskl: 666, 
+    makeTest: function() {
+        console.log(Object.keys(newObject).length);
+    }
+};
+newObject.makeTest();
+
+console.log(Object.keys(newObject));//этот вариант возвращат названия ключей.(key)
+//console.log(Object.keys(newObject).length); этот вариант возвращает колличество ключей(key) в объекте.
+
+
+let obj4 = {1:'пн',2:'вт',day:'ср',4:'чт',5:'пт',6:'сб',7:'вс'};
+console.log(obj4.day);
+
+let arr5 = ['a','b','c','d','+',','];
+console.log(arr5[0]+ arr5[4] + arr5[1] + arr5[5]+ arr5[2] + arr5[4] + arr5[3]);
+console.log('a + b, c + d');//результат тот же ,как правильно не знаю
+
+let arr6 = [2, 5, 3, 9];
+let result = arr6[0] * arr6[1] + arr6[2] * arr6[3];
+console.log(result);
+
+let obj5 = {a: 1, b: 2, c: 3};
+console.log(obj5.c);//выводит 3.
+//console.log(obj5['c']);//выводит 3.
+
+let obj= {Коля :'1500', Валя: '1000', Сергей: 2500};
+console.log( obj['Сергей'],obj['Валя'], obj.Коля);
+
+let arr7 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+console.log(arr7[1][0]);
+
+let obj7 = {js:['jQuery','Angular'], php: 'hello', css: 'world'};
+console.log(obj7.js[0]);
+
+let arr8 = {
+    ru: ['пн','вт','ср','чт','пт','сб','вс'],
+    en: ['mn','td','wd','th','ph','sb','sa']
+};
+console.log(arr8.ru[0], arr8.en[2]);
+
+//let arr9 = {
+  //  lang:[ru, en],
+//day: {1:'п', 2:'в', 3:'', 4:'', 5:'', 6:'', 7:''},
+    // ['пн','вт','ср','чт','пт','сб','вс'],
+  //   ['mn','td','wd','th','ph','sb','sa']
+//};не решённая задача
+
+let num = 10;
+if (num == 10) {
+    console.log('Верно');
+} else {
+    console.log('Не верно');
+}
+
+const min = 13;
+if (min >= 0 && min <= 15) {
+    console.log('В первую четверть');
+} 
+if (min > 15 && min <= 30) {
+    console.log('Вторая четверть');
+}
+if (min > 30 && min <=45) {
+    console.log('Третья четверть');
+}
+if (min > 45 && min <= 59) {
+    console.log('Четвёртая четверть');
+}
+
+let i = 0;
+let n = 0;
+while (i < 5) {
+    i++;
+    if (i == 3) {
+        continue;
+    }
+    n += i;
+    console.log(n);
+}
+
+let i = 0,
+    j = 0;
+    while (i < 4) {
+        console.log(i);
+        i += 1;
+        checkj:
+            while (j > 4) {
+                console.log(j);
+                j -= 1;
+                if ((j % 2) != 0) {
+                    continue checkj;
+                }
+                console.log(j + "чёрное.");
+            }
+            console.log("i = " + i);
+            console.log("j = " + j);
+    }
+
+   function dumpprops(obj, objname) {
+       let result = "";
+       for (let i in obj) {
+           result += objname + "." + i + " = " + obj[i] + "<br>";
+   } 
+   result += "<br>";
+   return result;
+}
+//Для объекта car со свойствами make and model, результатом будет:
+//car.make = Ford
+//car.model = Mustang
+//Также по ключу можно выводить значение: смотри пример ниже.
+
+let obj0 = {model: 'AUDI A8', year: '2019', color: 'brown'};
+
+for (key in obj0) {
+    console.log(`${key} = ${obj0[key]}`);
+}
+//model = AUDI A8
+//year = 2019
+//color = brown
+
+let arr10 = ['AUDI A7', '2018', 'black'];
+arr10.cost = '$200.000';
+
+for (key in arr10) {
+    console.log(`${key} = ${arr10[key]}`);
+}//этот цикл выводит:
+// 0 = AUDI A7
+// 1 = 2019
+// 2 = black
+// cost = $200.000//резюме: лучше использовать цикл for
+//иначе for in захватит не только массив , но и другие св-ва и методы.
+
+//следующий пример показывает разницу между циклами 
+//for of и for in/ for in идёт по именам св-в, а for of по значениям.
+let arr11 = [2,4,7];
+arr11.foo = "world";
+
+for (let i in arr11) {
+    console.log(i);//выводит "0","1","2","foo"
+}
+
+for (let i of arr11) {
+    console.log(i);//выводит "2","4", "7"
+}
+
+function loop(x) {
+    if (x >= 10)
+    return;
+    loop(x + 1);
+}
+loop(0);
+console.log(x);
+
+//Динамическая типизация :
+//1)способ
+console.log(typeof(String(null)));//превращение в строковый тип данных булинового значения.
+console.log((String(null)));//получим null, строковым типом данных.
+console.log(typeof(String(5)));//получим строку, цифра будет в ковычках.
+//2)способ - это конкотенация, т.е. если к строке прибавить что угодно , это будет строка.
+console.log(typeof(7 + ''));//выведет string,строковый тип данных.
+
+const num0 = 4;
+console.log("https://vk.com/catalog/" + num);
+//https://vk.com/catalog/4 - такой будет выведенная запись, можно уже идти по ссылке.))
+//можно изпользовать бэктики.
+const fontSize = 26 + 'px';//это применение динамической типизации.
+
+// To Number
+
+// 1)
+console.log(typeof(Number('7')));//выведено будет number.
+//2) это унарный +
+console.log(typeof(+'9'));//выведет number.
+//ещё один вариант применения унарного плюса:
+let answ = +prompt("привет", "");
+//всё, что приходит от пользователя имеет тип данных "строка".
+//3) метод
+console.log(typeof(parseInt("35px", 10)));//вывеодит - number.
+
+//To boolean
+//всегда не правда или false это:
+// ноль  0, пустая строка, даже без пробела "", null, undefined, NaN;
+
+let switcher = null;
+
+if (switcher) {
+    console.log("Working...");
+}
+switcher = 1;
+
+if (switcher) {
+    console.log("Working...");
+}
+//2) способ преобразования
+console.log(typeof(Boolean('20')));//выведет boolean.
+//3) способ преобразования в логический тип данных: boolean.
+console.log(typeof(!!"55555"));//два знака !! сделают преобразование в логический тип данных.
+
+//ЗАЧИ С СОБЕСЕДОВАНИЙ
+//1. Какое будет выведено значение: let x = 5; alert(x++);?
+//2. Чему равно такое выражение: [] + false - null + true?
+//3. Что выведет код: let y = 1; let x = y = 2; alert(x);?
+//4. Чему равна сумма [] + 1 + 2 ?
+//5. Что выведет этот код: alert("1"[0]);?
+//6. Чему равно 2 && 1 && null && 0 && udefined?
+//7. Есть ли разница между выражениями? 
+//   !!(a && b) и (a && b)?
+//8. Что выведет этот код: alert(null || 2 && 3 || 4);?
+//9. a = [1, 2, 3]; b = [1, 2, 3]; Правда ли , что a == b ?
+//10. Что выведет этот код: alert(+"Infinity"); ?
+//11. Верно ли сравнение: "Ёжик" > "яблоко"?
+//12. Чему равно 0 || "" || 2 || undefined || true || false?
+
+// Решение:
+//1. let x = 5; alert(x++); выведет 5. Здесь сначала выводится х, а потом прибавляется 1.
+//называется постфиксная запись инкримента.
+//2.сначала напишем: console.log(typeof([] + false)); запустим и получаем тип данных строка: string.
+//пустой массив приводится к типу данных строка и мы складываем строку и false, а при сложении со строкой
+//ЛЮБЫХ типов данных, мы ПОЛУЧАЕМ СТРОКУ! "false"
+//далее если напишем: 
+//console.log([] + false - null); //получаем "NaN", не число
+//console.log([] + false - null + true);//тоже "NaN".
+//3. let y = 1;
+//   let x = y = 2;//так как 2 это примитивный тип данных код идёт с права на лево.
+//  2 присваивается 'y',затем y присваивается 'x'.
+//  alert(x); //выведет 2.
+//4. console.log([] + 1 + 2);//выведет "12"!!!Потаму ,что пустой массив строчный тип данных и
+// строка с числом даст строку со значением "1", далее к строке"1" "приклеется" 2 и результат "12".
+//5. alert("1"[0]); //выведет 1 .
+//6. && оператор или проверяет верно ли и то выражение и это и другое , у него есть особенность - 
+//  он спотыкается на лжи. Сравнения идут слева на право.
+// console.log(2 && 1 && null && 0 && undefined);
+//код доходит до null, в логическом контексте это ложь и станавливается.
+//дальше код не пойдёт , выведено будет null.
+//7. console.log(!!(1 && 2) === (1 && 2)); //мы получим false, так как
+// два !! превращают последующее выражение в булиновое, а булиновое не равно числовому, в логичеком контексте.
+//8. alert( null || 2 && 3 || 4);смотрим таблицу операторов и видим , что логичское и будет выполняться раньше,
+// его приоритет выше. Пойдём шаг за шагом:
+//  2 && 3 // и то и другое правда ,и вернёмся последнее значение слева на право, и это 3.
+//  null || 3 , или запинается на правде, null это ложь, а 3 это правда в лог-м кон-те. Здесь вернёмся 3.
+//  3 || 4, или запинается на правде ,вернётся нам 3.
+//9. a не равно b , это разные хранилища, хоть и хронят одинаковое. Мы сравниеваем хранилища.
+//10. выведет "Infinity",+ унарный плюс даёт числовой тип данных, но команда alert выведет в модальное окно Infinity.
+//11. console.log("Ёжик" > "яблоко"); нам понадобится таблица "юникод" , там есть значения букв, регистров,проще 
+//запустить код и узнать, что будет. В нашем случае false.
+//12. "или" запинается на правде, сравнение дойдёт до 2 и код дальше не пойдёт.
+// выведено будет 2.
+
+/*let a = -5;
+if (a == 0) {
+    console.log('Верно');
+} else {
+    console.log('Не верно');
+}
+
+let a = 0;
+if (a > 0) {
+    console.log('Верно');
+} else {
+    console.log('Не верно');
+}
+
+let a = 0;
+if (a <= 0) {
+    console.log('Верно');
+} else {
+    console.log('Не верно');
+}
+
+let a = 1;
+if (a === '1') {
+    console.log('Верно');
+}  else {
+    console.log('Неверно');
+}
+
+let test = false;
+if (test == true) {
+    console.log('Верно');
+}  if (test != true) {
+    console.log('Неверно');
+}
+
+let a = 1;
+if (a > 0 && a < 5) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+let a = 2;
+if (a == 0 || a == 2) {
+   a = a + 7;
+} else  {
+   a = a / 10; 
+}
+console.log(a);
+
+let b = 2,
+    a = 3,
+    c = 0; 
+if (a <= 1 || b >= 3) {
+    c = a + b;
+} else {
+    c = a - b;
+}
+console.log(c);
+
+let a = 7,
+    b = 5;
+    if (a > 1 && a < 11 || b >= 6 && b < 14) {
+        console.log('Верно');
+    } else {
+        console.log('Неверно');
+    }*/
+
+    const nume = 3;
+    let resultat = '';
+    switch (nume) {
+        case 1:
+          resultat = 'Зима';
+            break;
+        case 2:
+          resultat = 'Весна';
+            break;
+        case 3: 
+            resultat = 'Лето';
+        break;
+        case 4: 
+        resultat = 'Осень';
+        
+        break; 
+        default:
+            console.log('Что то не так');
+            break;
+    } 
+    console.log(resultat);
+
+    
+
+
+
+
+
+
+
