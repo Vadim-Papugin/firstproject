@@ -620,7 +620,7 @@ learnJS('JS', function() {
 });
 
 //const obj = new Object();//устаревший вариант.
-const options = {
+/*const options = {
     name: 'test',
     width: 1024,
     height: 1024,
@@ -695,12 +695,14 @@ let arr8 = {
 };
 console.log(arr8.ru[0], arr8.en[2]);
 
-//let arr9 = {
-  //  lang:[ru, en],
-//day: {1:'п', 2:'в', 3:'', 4:'', 5:'', 6:'', 7:''},
-    // ['пн','вт','ср','чт','пт','сб','вс'],
-  //   ['mn','td','wd','th','ph','sb','sa']
-//};не решённая задача
+let lang = ['ru' ],
+    day = ['1','2','3','4','5','6','7'];
+    
+    if (lang[0] && day[3]) {
+        console.log('Среда');
+    }
+
+
 
 let num = 10;
 if (num == 10) {
@@ -732,7 +734,7 @@ while (i < 5) {
     }
     n += i;
     console.log(n);
-}
+}*/
 
 let i = 0,
     j = 0;
@@ -767,7 +769,7 @@ let i = 0,
 
 let obj0 = {model: 'AUDI A8', year: '2019', color: 'brown'};
 
-for (key in obj0) {
+for (let key in obj0) {
     console.log(`${key} = ${obj0[key]}`);
 }
 //model = AUDI A8
@@ -777,7 +779,7 @@ for (key in obj0) {
 let arr10 = ['AUDI A7', '2018', 'black'];
 arr10.cost = '$200.000';
 
-for (key in arr10) {
+for (let key in arr10) {
     console.log(`${key} = ${arr10[key]}`);
 }//этот цикл выводит:
 // 0 = AUDI A7
@@ -799,9 +801,12 @@ for (let i of arr11) {
     console.log(i);//выводит "2","4", "7"
 }
 
+let x = 0;
 function loop(x) {
-    if (x >= 10)
-    return;
+    if (x >= 10){
+        return;
+        
+    }
     loop(x + 1);
 }
 loop(0);
@@ -816,7 +821,7 @@ console.log(typeof(String(5)));//получим строку, цифра буд�
 console.log(typeof(7 + ''));//выведет string,строковый тип данных.
 
 const num0 = 4;
-console.log("https://vk.com/catalog/" + num);
+console.log("https://vk.com/catalog/" + num0);
 //https://vk.com/catalog/4 - такой будет выведенная запись, можно уже идти по ссылке.))
 //можно изпользовать бэктики.
 const fontSize = 26 + 'px';//это применение динамической типизации.
@@ -835,7 +840,7 @@ console.log(typeof(parseInt("35px", 10)));//вывеодит - number.
 
 //To boolean
 //всегда не правда или false это:
-// ноль  0, пустая строка, даже без пробела "", null, undefined, NaN;
+// ноль  0, пустая строка, без пробела "", null, undefined, NaN;
 
 let switcher = null;
 
@@ -992,11 +997,80 @@ let a = 7,
     } 
     console.log(resultat);
 
+    let day1 = 11;
+    if (day1 >= 1 && day1 <= 10) {
+        console.log('Первая декада');
+    }   if (day1 > 10 && day1 <= 20) {
+        console.log('Вторая декада');
+    }  if (day1 > 20 && day1 <= 31) {
+        console.log('Третья декада');
+    }
+
+    let month = 12;
+    if (month >= 1 && month <= 2) {
+        console.log('Зима');
+    } if (month > 2 && month <= 5) {
+        console.log('Весна');
+    } if (month > 5 && month <= 8) {
+        console.log('Лето');
+    } if (month > 8 && month <= 11) {
+        console.log('Осень');
+    } if (month == 12) {
+        console.log('Зима');
+    }
     
+const string = 'abcdef';
+if (string[0] =='a' ) {
+    console.log('Да');
+} else  {
+    console.log('Нет');
+
+}
+
+   
+const string1 = '1234567';
+if (string1[0] === '1' ) {
+    console.log('Да');
+} else  {
+    console.log('Нет');
+
+}
+
+   
+const string2 = '135785';
+let result1 = ((+string2[0]) + (+string2[1]) + (+string2[2]));
+let result4 = ((+string2[3]) + (+string2[4]) + (+string2[5]));
+if (result1 == result4) {
+    console.log('Да');
+}  console.log('Нет');
+//console.log(result1, result4); 
+
+const string3 = '035';
+let result2 = ((string3[0]) + (string3[1]) + (string3[2]));
+console.log(result2); 
+
+const string4 = '132613';
+let result3 = ((+string4[0]) + (+string4[1]) + (+string4[2]));
+
+let result5 =  ((+string4[3]) + (+string4[4]) + (+string4[5]));
 
 
+if (result3 == result5) {
+    console.log('Да');
+}   console.log('Нет');
 
-
-
+let str = '354423';
+let summ = ((+str[0]) + (+str[1]) + (+str[2]));
+let summ1 = ((+str[3]) + (+str[4]) + (+str[5]));
+if (summ == summ1) {
+    console.log('Верно');
+} else {
+    console.log('Нет');
+}
+let it = 1;
+while (it <= 50) {
+    document.write(it + '<br>');
+    i++;
+}
 
 
